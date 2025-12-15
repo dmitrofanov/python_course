@@ -5,5 +5,5 @@ while answer != 'stop':
     numbers.append(int(answer))
     answer = input(invitation)
 
-# print(numbers)
+# print(numbers)WWW
 print('Сумма всех введённых чисел:', sum(numbers))

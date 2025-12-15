@@ -9,7 +9,7 @@ PI = 3.14
 if PI == 4:
     print("That's not right...")
 
-status_code = 404
+status_code = 200
 
 if status_code == 200:
     print('OK')
@@ -19,8 +19,3 @@ elif status_code == 500:
     print('Server error')
 else:
     print(f'An actual {status_code=}')
-
-
-
-
-
