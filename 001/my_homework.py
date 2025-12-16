@@ -65,4 +65,5 @@ print(s / l)
 
 items = input("Введите строку: ")
 list_items = items.split(',')
+list_items.sort()
 print(list_items)
