@@ -1,4 +1,4 @@
-secret = 100
+secret = 25
 answer =int(input('Введите число: '))
 while secret != answer:
     if answer > secret:
