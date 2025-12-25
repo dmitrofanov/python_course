@@ -2,5 +2,5 @@
 def average_rating(numbers):
     for num in numbers:
         result = sum(numbers) / len(numbers)
-        print(result)
-average_rating([5, 4, 5, 1])
+        return result
+print(average_rating([5, 4, 5, 1]))
