@@ -42,7 +42,7 @@ print(moves1 == moves2, moves1 is moves2)
 response1 = {'code': 200, 'status': 'OK', 'payload': '<p>Hello there!</p>'}
 print(response1)
 response2 = dict(code=200, status='OK', payload='<p>Hello there!</p>')
-print(response2)
+print(response2) 
 print(response1 == response2, response1 is response2)
 
 
