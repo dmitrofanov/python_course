@@ -14,8 +14,8 @@ my_list.append(True)
 
 print("Список:", my_list)
 
-my_list = ['100', '77.7', 'hi' , 'False']
-new_list = ['500' '99.9', 'new', 'True']
+my_list = [100, 77.7, 'hi' , False]
+new_list = [500, 99.9, 'new', True, my_list]
 my_list.extend(new_list)
 
 print('Список:', my_list)
@@ -23,11 +23,11 @@ print('Список:', my_list)
 
 #Множество
 
-my_set = {'1000', 'QWERTY', '1.0', 'False'}
+my_set = {100, 'QWERTY', 1.0, False}
 my_set.add(4)
 my_set.add('privet')
 my_set.add(',')
-my_set.add('True')
+my_set.add(True)
 print('Множество:', my_set)
 
 #Словарь
@@ -39,7 +39,7 @@ my_dict['age'] = 36
 print('Словарь: ',my_dict)
 
 #Кортеж
-my_tuple1 = ('123', 'abc', '10.0', 'True')
-my_tuple2 = ('321', 'ABC', '20.00', 'False')
+my_tuple1 = (123, 'abc', 10.0, True)
+my_tuple2 = (321, 'ABC', 20.00, False)
 my_tuple1 += my_tuple2
 print('Кортеж: ',my_tuple1)
