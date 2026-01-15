@@ -1,4 +1,4 @@
-# Блок else
+# Блок finally
 
 try:
     число = int(input("Введите число: "))

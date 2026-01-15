@@ -3,6 +3,7 @@
 try:
     число = int(input("Введите число: "))
     результат = 10 / число
+    print(результат)
 except ValueError: # Если не смогли преобразовать в int
     print("Это было не число!")
 except ZeroDivisionError: # Если деление на ноль
