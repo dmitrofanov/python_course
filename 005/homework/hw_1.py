@@ -16,13 +16,24 @@ print(divide_safe(a=10, b=0, default=0))  # Должно вернуть 0
 print(divide_safe(a="десять", b=2))  # Должно вернуть None
 """
 
-# Подсказка: структура функции
+# # Подсказка: структура функции
+# def divide_safe(a, b, default=None):
+#     try:
+#         # попытаться вернуть a / b
+#     except ZeroDivisionError:
+#         # вернуть default
+#     except TypeError:
+#         # вернуть default
+#     except Exception:
+#         # вернуть default (на всякий случай)
+
 def divide_safe(a, b, default=None):
     try:
-        # попытаться вернуть a / b
+        return a / b
     except ZeroDivisionError:
-        # вернуть default
+        return default
     except TypeError:
-        # вернуть default
+        return default
     except Exception:
-        # вернуть default (на всякий случай)
+        return default
+print(divide_safe(a=100, b=0, default=42))
