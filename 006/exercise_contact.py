@@ -24,9 +24,29 @@ contacts = {}
 ШАГ 5 (дополнительно): Напиши функцию show_all(),
     которая красиво выводит все контакты.
 """
+contacts = {}
+def add_contact(name, phone):
+    contacts[name] = phone
+def find_contact(name):
+    if name in contacts:
+          return contacts[name]
+    else:
+        return 'Контакт не найден'
+def show_all():
+     for name,phone in contacts.items():
+          print(name,':', phone)
+    
+
+
+
+
 
 # Готовые вызовы для теста (расскомментируй):
-# add_contact("Мама", "12345")
-# add_contact("Друг", "67890")
+add_contact("Мама", "12345")
+add_contact("Друг", "67890")
+show_all()
+# print(contacts)
+
 # print(find_contact("Мама"))  # должен вывести 12345
 # print(find_contact("Незнакомец"))  # "Контакт не найден"
+

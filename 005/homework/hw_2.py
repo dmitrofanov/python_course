@@ -41,7 +41,9 @@
 #         print("Ошибка! Введите возраст числом (например, 25)")
 
 def create_profile(name, age, city, hobby):
-    return dict(name=name, age=age, city=city, hobby=hobby)
+    return dict(firstname=name, age=age, city=city, hobby=hobby)
+def show_profile(profile):
+    print(f"Имя :{profile['firstname']},Возраст :{profile['age']},Город : {profile['city']}, Хобби: {profile['hobby']}")
 name = input('Введите имя :')
 while True:
     try:
@@ -51,5 +53,5 @@ while True:
         print("Ошибка! Введите возраст числом (например, 25)")
 city = input('Введите город(не обязательно),для продолжения нажмите Enter :')
 hobby = input('Введите город(не обязательно),для продолжения нажмите Enter :')
-create_profile(name, age, city, hobby)
-print(f"Имя :{name},Возраст :{age},Город : {city}, Хобби: {hobby}")
+show_profile(create_profile(name, age, city, hobby))
+# print(f"Имя :{name},Возраст :{age},Город : {city}, Хобби: {hobby}")

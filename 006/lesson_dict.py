@@ -36,15 +36,35 @@ my_dict['age'] # Вернёт 25
 {'RAM': 'Kingston', 'CPU': 'Intel', 'SDD': 'Samsung'}
 {'engine': 1.6, 'acceleration': 9.7, 'doors': 5}
 
+dict(RAM='Kingston',CPU='Intel',SSD='Samsung')
+dict(engine= 1.6, acceleration= 9.7, doors = 5 )
+
 # 2) Создать с помощью функции dict и с помощью синтаксиса литерала словарь из переменных name, age, hobby
 name = 'Daria'
 age = 34
 hobby = 'Series'
+dict(name = name, age = age, hobby = hobby)
+{'name': name, 'age': age, 'hobby': hobby}
 
 # 3) Создай с помощью синтаксиса литерала словарь colleagues где ключом будет являться имя, а значением должность для трёх своих коллег.
+colleagues = {'Anna' : 'programmist', 'Pavel' : 'sysadmin', 'Dima': 'it'}
 
 # 4) Создай с помощью  литерала словарь, где ключами будет являться название блюда в кафе, а значениями его стоимость, для трёх блюд.
+dishes = {'burger': 30,'salat': 20.0}
 
 # 5) Возьми один из созданных в предыдущих заданиях словарей и проведи проверку на существование ключей в нём. Возьми как существующие, так и отстуствующие ключи для проверки.
-
+'burger' in {'burger': 30,'salat': 20.0} True
+'potatoes' in {'burger': 30,'salat': 20.0} False
 # 6) Возьми один из созданных в предыдущих заданиях словарей и выведи его значения, с помощью передачи ключей в оператор квадратные скобки.
+colleagues = {'Anna' : 'programmist', 'Pavel' : 'sysadmin', 'Dima': 'it'}
+colleagues['Anna']
+colleagues['Semen'] = 'HR'
+
+# 7) Создать словарь с помощью функции dict screen,name,model
+
+m = dict(screen = 'oled',name = 'phone', model = 'iphone')
+print(m)
+
+# 8) с помощью литерала
+m = {'screen': 'oled','name': 'phone', 'model': 'iphone','version': 15}
+print(m)

@@ -8,7 +8,7 @@ logs_volume = 300 * 1024 ** 2
 stats = dict(name=name, rps=rps, logs_volume=logs_volume)
 machines = {host: stats}
 
-pprint(machines)
+#pprint(machines)
 
 host = '192.168.200.53'
 name = 'Application-Server-001'
