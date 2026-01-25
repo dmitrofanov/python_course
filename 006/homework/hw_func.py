@@ -3,10 +3,24 @@ def connection_info(protocol, host, port):
     'введи сюда свой код'
 # верни из функции словарь, в котором значения будут взяты из параметров функции
 
+def connection_info(protocol, host, port):
+    return dict(protocol = protocol,host = host,port = port)
+print(connection_info('protocol', 'host', 'port'))
+#или пример
+print(connection_info('https', 'server', 443))
+
 # 2) Дана следующая функция
 def connection_string(protocol, host, port):
     return f'{protocol}://{host}:{port}'
 # Напиши функцию show_connection которая принимает строку подключения и выводит её с помощью функции print
+
+def connection_string(protocol, host, port):
+    return f'{protocol}://{host}:{port}'
+
+conn = connection_string('https','server1','443')
+def show_connection(connection_string):
+    print(connection_string)
+show_connection(conn)
 
 # 3) возьми функции connection_string и show_connection из задания 7 и соедини их вызовы вместе. Нужно чтобы значение возвращаемое функцией conenction_string передавалось в функцию show_connection.
 
