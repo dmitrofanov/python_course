@@ -1,3 +1,5 @@
-# 3) возьми функции connection_string и show_connection из задания 7 и соедини их вызовы вместе. Нужно чтобы значение возвращаемое функцией conenction_string передавалось в функцию show_connection.
+# 5) Напиши функцию words, которая принимает предложение (строку) и возвращает список слов в этом предложении.
 
-    
+def words(text):
+    return text.split()
+print(words('slovo1 slovo2 slovo3'))

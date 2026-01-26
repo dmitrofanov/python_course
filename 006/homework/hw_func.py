@@ -17,13 +17,24 @@ def connection_string(protocol, host, port):
 def connection_string(protocol, host, port):
     return f'{protocol}://{host}:{port}'
 
-conn = connection_string('https','server1','443')
+connection_string('https','server1','443')
 def show_connection(connection_string):
     print(connection_string)
-show_connection(conn)
+show_connection(connection_string)
 
 # 3) возьми функции connection_string и show_connection из задания 7 и соедини их вызовы вместе. Нужно чтобы значение возвращаемое функцией conenction_string передавалось в функцию show_connection.
 
 # 4) Напиши функцию countdown, которая принимает число и выводит через print все числа от заданного до 0. Используй цикл while.
+
+def countdown(number):
+    if number >= 0:
+        while number:
+            print(number)
+            number -= 1
+    else:
+        while number <= 0:
+            print(number)
+            number += 1
+countdown(5)
 
 # 5) Напиши функцию words, которая принимает предложение (строку) и возвращает список слов в этом предложении.
