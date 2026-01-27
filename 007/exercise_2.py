@@ -12,3 +12,10 @@
    
 Подумай: почему результаты разные?
 """
+
+def make_upper(text):
+    return text.upper()
+def add_farewell(text):
+    return text + " прощай!!!"
+print(add_farewell(make_upper("привет")))
+print(make_upper(add_farewell("привет")))
