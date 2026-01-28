@@ -15,3 +15,12 @@
 
 Подумай, в каком порядке нужно вызывать функции?
 """
+
+def apply_discount(price, percent):
+    return price * (1 - percent/100) 
+def add_tax(price, tax_rate):
+    return price * (1 + tax_rate/100)
+def format_price(price):
+    return f"Цена: {price} руб."
+
+print(format_price(add_tax(apply_discount(1000,20),10)))

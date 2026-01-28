@@ -35,3 +35,28 @@ print("Суммы по категориям:", totals)
 
 # Тестовый вызов (убери комментарий после написания функции):
 # print(total_by_category(purchases))
+
+
+purchases = [
+    {"item": "яблоки", "category": "фрукты", "price": 150},
+    {"item": "молоко", "category": "молочка", "price": 80},
+    {"item": "хлеб", "category": "выпечка", "price": 60},
+    {"item": "бананы", "category": "фрукты", "price": 120},
+    {"item": "йогурт", "category": "молочка", "price": 45},
+    {"item": "булка", "category": "выпечка", "price": 40}
+]
+
+def total_by_category(purchases_list):
+    result = {}
+    for purchase in purchases_list:
+        category = purchase['category']
+        price = purchase['price']
+        if category in result:
+            result[category] += price
+        else:
+            result[category] = price
+    return result
+totals = total_by_category(purchases)
+print("Суммы по категориям:", totals)
+
+def most_expensive(purchases_list):

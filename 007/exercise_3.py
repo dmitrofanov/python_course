@@ -15,3 +15,20 @@
 
 Сделай так, чтобы программа выводила каждый промежуточный шаг
 """
+
+def square(x):
+    y = x ** 2
+    print('square', y)
+    return y
+
+def increment(x):
+    y = x + 1
+    print('increment', y)
+    return y
+
+def half(x):
+    y = x / 2
+    print('half', y)
+    return y
+
+print(increment(square(half(10))))
