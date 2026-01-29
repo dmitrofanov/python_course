@@ -15,23 +15,22 @@
 """
 
 def filter_even(numbers):
-    even_numbers = list()
-    for even_number in numbers:
-        if even_number % 2 == 0:
-            even_numbers.append(even_number)
-    return even_numbers
+    evens = list()
+    for number in numbers:
+        if number % 2 == 0:
+            evens.append(number)
+    return evens
 
-def square_all(filter_even):
-    square_numbers = list()
-    for square_number in filter_even:
-        square_numbers.append(square_number ** 2)
-    return square_numbers
+def square_all(numbers):
+    squares = list()
+    for number in numbers:
+        squares.append(number ** 2)
+    return squares
 
-def sum_all(square_all):
-    total = 0
-    for sum_number in square_all:
-        total = total + sum_number
-    return total
+def sum_all(numbers):
+    return sum(numbers)
 
-print(sum_all(square_all(filter_even([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))))
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = sum_all(square_all(filter_even(numbers)))
+print(f"Сумма квадратов чётных чисел: {result}")
           
