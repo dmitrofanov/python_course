@@ -10,3 +10,36 @@
 Обработай текст цепочкой:
 find_most_common(count_words(clean_words(split_text(текст))))
 """
+
+def split_text(text):
+    return text.split()
+
+def clean_words(words):
+    cleaned = []
+    for word in words:
+        clean_word = word.strip(".,!?;:\"\'()").lower()
+        if clean_word:
+            cleaned.append(clean_word)
+    return cleaned
+
+def count_words(words):
+    counts = {}
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+    return counts
+
+def find_most_common(word_counts):
+    max_value = 0
+    max_word = None
+    for word, value in word_counts.items():
+        if value > max_value:
+            max_value = value
+            max_word = word
+    return max_word, max_value
+
+
+print(find_most_common(count_words(clean_words(split_text("я играю     по вечерам в игры,после того как я позанимаюсь, я опять играю в игры")))))
+
