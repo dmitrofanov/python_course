@@ -9,3 +9,21 @@
 
 Преобразуй яблоко: serve(cut(wash(take_food('яблоко')))). На выходе: "Подано: порезанное чистое яблоко".
 """
+
+def take_food(food):
+    if food in ['яблоко', 'морковь']:
+        return food
+    else:
+        return "Неизвестная еда"
+
+def wash(food):
+    return 'чистое' + " " + food
+
+def cut(food):
+    return 'порезанное' + " " + food
+
+def serve(food):
+    return f"Подано: {food}"
+
+result = serve(cut(wash(take_food('яблоко'))))
+print(result)
