@@ -9,19 +9,25 @@
 """
 
 
+
 class Wallet:
     def __init__(self):
         self.money = 0
-
-    def add_money(self, amount):
+    
+    def add_money(self,amount):
         self.money += amount
     
     def show_money(self):
-        print(f"В кошельке: {self.money} рублей")
+        print(f'В кошельке: {self.money} рублей')
+    
+wallet1 = Wallet()
 
-my_wallet = Wallet()
-my_wallet.add_money(100)
-my_wallet.add_money(50)
-my_wallet.show_money()
+wallet1.show_money()
+wallet1.add_money(100)
+wallet1.show_money()
+wallet1.add_money(50)
+wallet1.show_money()
+
+    
 
     
