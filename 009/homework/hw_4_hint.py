@@ -24,7 +24,7 @@ class Calculator:
     def show_history(self):
         # Покажи всю историю операций
         print("История операций:")
-        for i, operation in enumerate(self.history, 1):
+        for i, operation in enumerate(self.history):
             print(f"{i}. {operation}")
         print(f"Текущий результат: {self.memory}")
     
