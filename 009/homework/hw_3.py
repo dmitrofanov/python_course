@@ -9,3 +9,33 @@
 
 Создай таймер на 5 секунд, сделай несколько тиков, проверь статус.
 """
+
+class Timer:
+    def __init__(self, start_time):
+        self.time = start_time
+    
+    def tick(self):
+        if self.time > 0:
+            self.time -= 1
+        return self.time #(почему тут нужен return?)
+    
+    def is_done(self):
+        return self.time == 0
+    
+    def reset(self, new_time):
+        self.time = new_time
+    
+    def status(self):
+        return f"Осталось: {self.time} сек."
+
+timer = Timer(10)
+print("Создан таймер на 5 секунд")
+print(timer.status())
+
+while not timer.is_done():
+    timer.tick()
+    print(f"{timer.status()}, Завершен? {timer.is_done()}")
+
+# for i in range(5): # (Почему тут цикл?)
+#     timer.tick()
+#     print(f"Тик {i+1}: {timer.status()}, Завершен? {timer.is_done()}")
