@@ -18,3 +18,16 @@
 Приветствия: ['Привет, Анна!', 'Привет, Иван!', 'Привет, Мария!', 'Привет, Петр!', 'Привет, Елена!']
 Длины имён: [4, 4, 5, 4, 5]
 """
+
+names = ["анна", "иван", "мария", "петр", "елена"]
+names1 = [name.title() for name in names]
+print(names1)
+
+names2 = [name for name in names if len(name) > 4 ]
+print(names2)
+
+names3 = ["Привет: " + name.title() + "!" for name in names]
+print(names3)
+
+names4 = [len(name) for name in names]
+print(names4)
