@@ -22,12 +22,9 @@ class SmartHome:
       self.security_enabled = True
    
    def toggle_lights(self):
-      if self.lights_on == False:
-          self.lights_on == True
-          print(f'Свет был выключен,включили')
-      else:
-         self.lights_on == False
-      print(f'Свет был включен,выключили')
+      self.lights_on = not self.lights_on
+      light_status='Свет был выключен,включили' if self.lights_on else 'Свет был включен,выключили'
+      print(light_status)
    
    def set_temperature(self,new_temp):
       if new_temp in range(15,31):
@@ -36,8 +33,22 @@ class SmartHome:
          print('Недопустимая температура')
    
    def toggle_security(self):
+      self.security_enabled = not self.security_enabled
       security_status = "Выключили охрану" if self.security_enabled else "Включили охрану"
       print(security_status)
+
+   def light_status(self):
+      return 'Свет включен' if self.lights_on else 'Свет выключен'
+
+   @property
+   def security_status(self):
+      return "Охрана включена" if self.security_enabled else "Охрана выключена"
+
+
+   @property
+   def status(self):
+      return f'Статус: {self.light_status()}, Температура: {self.temperature}, Статус охраны {self.security_status}'
+
 
    def away_mode(self):
       self.lights_on = False
@@ -70,10 +81,9 @@ class SmartHome:
 
 smarthome= SmartHome()
 smarthome.toggle_lights()
-smarthome.set_temperature(10)
+smarthome.set_temperature(20)
 smarthome.toggle_security()
 smarthome.away_mode()
 smarthome.home_mode()
-smarthome.status()
 
         
