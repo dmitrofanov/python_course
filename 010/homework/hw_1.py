@@ -54,15 +54,31 @@ class SmartHome:
       self.lights_on = False
       self.temperature = 18
       self.security_enabled = True
-      print(self.status)
+      # light_status = 'Свет мегавключен' if self.lights_on else 'Свет мегавыключен'
+      # security_status = 'Охрана включена' if self.security_enabled else 'Охрана отключена'
+      print(f'Статус: {self.light_status()}, Температура: {self.temperature}, Статус охраны {self.security_status()}')
+
+   def light_status(self):
+      return 'Свет MEGA включен' if self.lights_on else 'Свет выключен'
+
+   def security_status(self):
+      return 'Охрана включена' if self.security_enabled else 'Охрана отключена'
 
    def home_mode(self):
       self.lights_on = True
       self.temperature = 22
       self.security_enabled = False
-      print(self.status)
+      # light_status = 'Свет включен' if self.lights_on else 'Свет выключен'
+      # security_status = 'Охрана включена' if self.security_enabled else 'Охрана отключена'
+      print(f'Статус: {self.light_status()}, Температура: {self.temperature}, Статус охраны {self.security_status()}')
+   
+   def status(self):
+      pass
       
-      
+
+   
+
+
 smarthome= SmartHome()
 smarthome.toggle_lights()
 smarthome.set_temperature(20)
