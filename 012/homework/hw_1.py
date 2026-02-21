@@ -10,16 +10,39 @@
 Это самый простой set comprehension - просто собираем уникальные элементы!
 """
 
-class StampCollection:
-    pass
+# class StampCollection:
+#     pass
 
-# Тестируем
+# # Тестируем
+# collection = StampCollection()
+# collection.add_stamp("Россия")
+# collection.add_stamp("Франция")
+# collection.add_stamp("Россия")
+# collection.add_stamp("Италия")
+# collection.add_stamp("Франция")
+
+# collection.show_all()
+# print("Уникальные страны:", collection.unique_countries())
+
+class StampCollection:
+    def __init__(self):
+        self.stamps = []
+    
+    def add_stamp(self,country):
+        self.stamps.append(country)
+        print(f'Добавили марку {country}')
+    
+    def show_all(self):
+        print("Все марки:", self.stamps)
+    
+    def unique_countries(self):
+        return {country for country in self.stamps}
+
 collection = StampCollection()
 collection.add_stamp("Россия")
 collection.add_stamp("Франция")
 collection.add_stamp("Россия")
 collection.add_stamp("Италия")
 collection.add_stamp("Франция")
-
 collection.show_all()
 print("Уникальные страны:", collection.unique_countries())
