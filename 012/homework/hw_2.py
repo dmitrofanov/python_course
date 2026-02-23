@@ -9,24 +9,33 @@
 Гласные: а, е, ё, и, о, у, ы, э, ю, я
 """
 
-class TextAnalyzer:
-    pass
+# class TextAnalyzer:
+#     pass
 
-# Тестируем
-analyzer = TextAnalyzer("Привет, как дела?")
-print("Текст:", analyzer.text)
-print("Уникальные буквы:", analyzer.get_unique_letters())
-print("Гласные:", analyzer.get_vowels())
-print("Согласные:", analyzer.get_consonants())
+# # Тестируем
+# analyzer = TextAnalyzer("Привет, как дела?")
+# print("Текст:", analyzer.text)
+# print("Уникальные буквы:", analyzer.get_unique_letters())
+# print("Гласные:", analyzer.get_vowels())
+# print("Согласные:", analyzer.get_consonants())
 
 class TextAnalyzer:
     def __init__(self,text):
-        self.text =text
+        self.text =text.lower()
     
     def get_unique_letters(self):
-        return {self.text}
+        return {char for char in self.text if char.isalpha()}
     
-
+    def get_vowels(self):
+        vowel = "аеёиоуыэюя"
+        s = set(vowel)
+        return {char for char in self.text if char.isalpha() and char in s}
+    
+    def get_consonants(self):
+        vowel = "аеёиоуыэюя"
+        s = set(vowel)
+        return {char for char in self.text if char.isalpha() and char not in s}
+    
 
 
 analyzer = TextAnalyzer("Привет, как дела?")

@@ -24,3 +24,8 @@ prices = [50, 30, 80, 45]
 """
 
 fruits = ["яблоко", "банан", "апельсин", "киви"]
+prices = [50, 30, 80, 45]
+print({key: value for key, value in zip(fruits,prices)})
+print({key: value*0.8 for key, value in zip(fruits,prices)})
+print({key: value for key, value in zip(fruits,prices) if value > 40 })
+print({"Фрукт:" + key: "Дорогой" if value > 50 else "Дешевый" for key, value in zip(fruits,prices)})
