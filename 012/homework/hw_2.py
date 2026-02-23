@@ -18,3 +18,19 @@ print("Текст:", analyzer.text)
 print("Уникальные буквы:", analyzer.get_unique_letters())
 print("Гласные:", analyzer.get_vowels())
 print("Согласные:", analyzer.get_consonants())
+
+class TextAnalyzer:
+    def __init__(self,text):
+        self.text =text
+    
+    def get_unique_letters(self):
+        return {self.text}
+    
+
+
+
+analyzer = TextAnalyzer("Привет, как дела?")
+print("Текст:", analyzer.text)
+print("Уникальные буквы:", analyzer.get_unique_letters())
+print("Гласные:", analyzer.get_vowels())
+print("Согласные:", analyzer.get_consonants())
