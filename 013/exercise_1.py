@@ -9,3 +9,28 @@
 
 zip поможет объединить данные из трёх списков!
 """
+
+class Menu:
+   def __init__(self):
+      self.dishes = []
+      self.prices = []
+      self.calories = []
+   
+   def add_dish(self, name, price, calories):
+      self.dishes.append(name)
+      self.prices.append(price)
+      self.calories.append(calories)
+   
+   def show_menu(self):
+      for name,price,calories in zip(self.dishes, self.prices, self.calories):
+         print(f'Блюдо: {name}, Цена: {price}, Калорий: {calories}')
+
+   def get_light_meals(self,limit):
+      return [dish for dish, cal in zip(self.dishes,self.calories) if cal < limit]
+   
+menu = Menu()
+menu.add_dish("Цезарь",100,200)
+menu.add_dish("Плов",50,100)
+print(f'Блюда: {menu.dishes}, Цены: {menu.prices}, Калории: {menu.calories}')
+menu.show_menu()
+print(f'Цена меньше лимита:{menu.get_light_meals(150)}')
