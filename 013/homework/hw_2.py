@@ -36,8 +36,8 @@ class Recipes:
         self.cooking_time.append(time)
 
     def show_recipes(self):
-       for self.name, self.ingredients, self.time in zip(self.names, self.ingredients_count, self.cooking_time):
-         print(f'Блюдо: {self.name}, Количество ингредиентов: {self.ingredients}, Калорий: {self.time}')
+       for name, ingredients, time in zip(self.names, self.ingredients_count, self.cooking_time):
+         print(f'Блюдо: {name}, Количество ингредиентов: {ingredients}, Калорий: {time}')
     
     def get_fast_recipes(self,max_time):
        return [names for names, cooking_time in zip(self.names, self.cooking_time) if cooking_time < max_time]
