@@ -24,4 +24,9 @@ class TreasureHunter:
         """Принимает строку команд и возвращает итоговые координаты"""
         self.move(commands)  # Выполняем все команды
         return [self.x, self.y]  # Возвращаем финальную позицию
+hunter = TreasureHunter()
+print(hunter.move("RRDD"))
+
+print(hunter.find_treasure("RRDD"))  # [2, 2]
+print(hunter.find_treasure("RRRRR")) # [4, 0]
 
