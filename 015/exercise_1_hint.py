@@ -1,3 +1,6 @@
+numbers = [5, 2, 8, 1, 9, 3, 7, 4, 6]
+print("Исходный список:", numbers)
+
 n = len(numbers)
 
 for i in range(n - 1):
