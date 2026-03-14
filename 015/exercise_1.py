@@ -19,3 +19,10 @@ print("Исходный список:", numbers)
 # 3. Поменяй местами элементы с индексами i и min_index
 
 # Напиши код здесь:
+
+my_list=[10, 4, 5, 45, -1, 9]
+for _ in range(len(my_list)):
+    for number in range(len(my_list) -1):
+        if my_list[number] > my_list[number + 1]:
+            my_list[number],my_list[number + 1] = my_list[number + 1],my_list[number]
+    print(my_list)
