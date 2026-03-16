@@ -28,3 +28,37 @@ servers = [
 ]
 
 # Твои решения:
+for server in servers:
+    print(f'Имя сервера: {server["name"]}')
+
+total = 0
+# for server in servers:
+#     x = server["cpu"]
+#     total += x
+# print(f'Общее количество ядер: {total}')
+print(f'Общее количество ядер: {sum([server["cpu"] for server in servers])}')
+
+name_server = None
+max_ram = 0
+for server in servers:
+    if server["ram"] > max_ram:
+        max_ram = server["ram"] 
+        name_server = server["name"]
+print(f'Сервер с max ram: {name_server}')
+
+for server in servers:
+    if server["status"] == "offline":
+        print(f'Сервер не в сети: {server["name"]}')
+
+total = 0
+for server in servers:
+    x = server["disk"]
+    total += x
+quantity = total /len(servers)
+print(f'Средний объем диска {quantity}')
+    
+
+    
+
+
+
