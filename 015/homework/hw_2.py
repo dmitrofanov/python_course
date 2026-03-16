@@ -18,3 +18,25 @@ servers = [
 # 3. Собери статистику и недоступные серверы
 
 # Решение:
+
+offline_servers=[]
+online_count=0
+offline_count=0
+
+for server in servers:
+    if server["status"] == "online":
+        online_count += 1
+    elif server["status"] == "offline":
+        offline_count += 1
+        offline_servers.append(server["name"])
+
+print(f"Всего серверов {online_count + offline_count}")  
+print(f"Серверов онлайн: {online_count}")
+print(f"Серверов оффлайн: {offline_count}")
+
+print("Недоступны сервера:")
+for offline_server in offline_servers:
+    print(f'- {offline_server}')
+
+
+

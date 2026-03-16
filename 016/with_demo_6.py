@@ -1,7 +1,5 @@
 import os
 
-
-
 class ChangeDir:
     def __init__(self, new_path):
         self.new_path = new_path
