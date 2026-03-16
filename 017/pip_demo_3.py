@@ -1,5 +1,5 @@
 # pypi.org
-
+'''
 # Проверка версии
 pip --version
 
@@ -26,3 +26,4 @@ pip install python-dotenv   # работа с .env файлами
 pip install colorama        # цветной вывод в терминал
 pip install tqdm            # прогресс-бары
 pip install pyjokes         # шутки для программистов
+'''
