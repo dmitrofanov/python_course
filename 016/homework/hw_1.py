@@ -15,3 +15,13 @@ with Greeter():
 """
 
 # Напиши класс Greeter здесь
+
+class Greeter():
+    def __enter__(self):
+        print("Добро пожаловать!")
+    
+    def __exit__(self, *args):
+        print("До свидания!")
+
+with Greeter():
+    print("Работаем...")
