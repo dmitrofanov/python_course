@@ -25,3 +25,14 @@ servers = [
 ]
 
 # Твоё решение:
+by_role = {}
+
+for server in servers:
+    role = server["role"]
+    name = server["name"]
+    
+    if role not in by_role:
+        by_role[role] = []
+    by_role[role].append(name)
+
+print(by_role)
