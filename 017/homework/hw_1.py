@@ -36,3 +36,10 @@ for server in servers:
     by_role[role].append(name)
 
 print(by_role)
+
+by_role = {}
+    for server in servers:
+        if server["role"] not in by_role:
+            by_role[server["role"]] = []
+        by_role[server["role"]].append(server["name"])
+print(by_role)

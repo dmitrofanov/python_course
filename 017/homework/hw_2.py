@@ -32,3 +32,21 @@ disk_data = {
 }
 
 # Твоё решение:
+name_server = None
+min_space = float("inf")
+for server in disk_data:
+    print(server)
+    free_space = 0
+    for disk in disk_data[server]:
+        # print(disk)
+        if disk["free_gb"] < 10:
+            print(f'Мало места на диске {disk["mount"]} на сервере {server}')
+        free_space += disk["free_gb"]
+    if free_space < min_space:
+        name_server = server
+        min_space = free_space
+    print(f'Общее свободное место на сервере: {server} {free_space}')
+    print(f'Минимальное свободное место на дисках {min_space} на сервере {name_server}')
+
+
+    
