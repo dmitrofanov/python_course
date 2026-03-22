@@ -44,8 +44,12 @@ for server in software:
         if install_prog["name"] == "python":
             install_python.append(server)
             python_versions.add(install_prog["version"])
+            major_version, minor_version = install_prog["version"].split('.')
+            if  int(major_version) < 3 or int(minor_version) < 9:
+                print(f'Сервер {server} имеет устаревшую версию питона')
+
         installed.append(f'{install_prog["name"]} {install_prog["version"]}')
-    print(installed)
+    print(f'Установленные сервисы на сервере {server} {installed}')
 
 
 print(f'Python установлен на сервере: {install_python}')
