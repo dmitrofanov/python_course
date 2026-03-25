@@ -35,3 +35,29 @@ schedule = {
         {"name": "Физика", "time": "12:00", "teacher": "Петров"},
     ],
 }
+#используем list comprehesion, но можно и генератор(заменив на круглые скобки)
+print(f'Уроки в понедельник: {", ".join([lesson["name"] for lesson in schedule["понедельник"]])}')
+
+# max_lesson = 0
+# max_day = None
+# for day in schedule:
+#     if len(schedule[day]) > max_lesson:
+#         max_lesson = len(schedule[day])
+#         max_day = day
+# print(f'День с максимальным числом уроков: {max_day}')
+
+max_day = max(schedule.items(),key=lambda x: len(x[1]))
+print(max_day[0])
+
+#Посчитать общее количество часов занятий (каждое занятие 1.5 часа)
+
+print(f'Общее количество часов занятий : {sum([len(lessons) for lessons in schedule.values()])* 1.5}')
+
+# Вывести все занятия, которые начинаются в 10:30
+
+for day, lessons in schedule.items():
+    for lesson in lessons:
+        if lesson["time"] == "10:30":
+            print(f'Занятие {lesson["name"]} начинается в 10-30 в/во {day}')
+
+
