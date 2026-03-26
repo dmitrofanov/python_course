@@ -9,7 +9,7 @@ for i in range(n - 1):
     for j in range(i + 1, n):
         if numbers[j] < numbers[min_index]:
             min_index = j
-    
+
     # Меняем местами
     if min_index != i:
         numbers[i], numbers[min_index] = numbers[min_index], numbers[i]
