@@ -8,9 +8,18 @@
 """
 
 def batch_processor(data, batch_size):
-    pass # твой код должен быть здесь
+    assert batch_size > 0
+    proc_list = []
+    for i in data:
+        proc_list.append(i)
+        if len(proc_list) == batch_size:
+            yield proc_list
+            proc_list = []
+    if proc_list:
+        yield proc_list
 
-processor = batch_processor([1,2,3,4,5,6,7,], 1)
+
+processor = batch_processor([1,2,3,4,5,6,7,], 0)
 
 for p in processor:
     print(p)
