@@ -15,7 +15,7 @@ average = sum(temperatures) / len(temperatures)
 print(f'Средняя температура {average}')
 
 print(f'Максимальная температура: {max(temperatures)}')
-print(f'Минимальная температура:min(temperatures)')
+print(f'Минимальная температура: {min(temperatures)}')
 
 count = 0
 for degree in temperatures:
