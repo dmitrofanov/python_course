@@ -10,3 +10,16 @@
 temperatures = [18, 22, 25, 19, 23, 21, 20]
 
 # Решение
+
+average = sum(temperatures) / len(temperatures)
+print(f'Средняя температура {average}')
+
+print(f'Максимальная температура: {max(temperatures)}')
+print(f'Минимальная температура: {min(temperatures)}')
+
+count = 0
+for degree in temperatures:
+    if degree > 20:
+        count += 1
+print(f'Температура больше 20 градусов была {count} раза')
+

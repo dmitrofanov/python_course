@@ -10,7 +10,7 @@
 """
 
 inventory = [
-    {"name": "Молоко", "category": "молочка", "quantity": 5, "price": 80}, 100
+    {"name": "Молоко", "category": "молочка", "quantity": 5, "price": 80},
     {"name": "Хлеб", "category": "выпечка", "quantity": 15, "price": 50},
     {"name": "Сыр", "category": "молочка", "quantity": 3, "price": 350},
     {"name": "Яблоки", "category": "фрукты", "quantity": 20, "price": 120},
@@ -30,6 +30,6 @@ for product in inventory:
     x = product["category"]
     y = product["quantity"] * product["price"]
     category_total[x] = category_total.get(x,0) + y
-print(max(category_total.items(), key=lambda x: x[1]))
+print(max(category_total.items(), key = lambda x: x[1]))
 
-# почитать метод get На словарях
+print(f'Самые дорогие товары: {", ".join(product["name"] for product in sorted(inventory, key = lambda x : -x["price"]) [:3])}')
