@@ -1,0 +1,75 @@
+# Переменные
+001/variables.py
+
+# Словари
+002/dicts.py
+004/dict_methods.py
+006/dict_initialization.py
+006/example_dict.py
+
+# Списки
+002/lists.py
+
+# Строки
+002/strings.py
+
+# Условия if-elif-else
+002/if-elif-else.py
+
+# Цикл for
+002/for.py
+
+# Цикл while
+002/while1.py
+002/while2.py
+
+# Функции
+003/functions.py
+005/positional_arguments.py
+005/named_arguments.py
+005/mixed_arguments.py'
+006/example_func.py
+006/ask_number.py
+007/func_chains_4.py
+
+# try-except-else-finally
+005/try_except_minimal_example.
+005/try_except_else.py
+005/try_except_else_multiple_excepts.py
+005/try_except_finally.py
+005/try_except_else_finally.py
+
+# Классы
+008/class_server.py
+009/class_car.py
+010/class_product.py
+010/class_gamecharacter.py
+012/class_shoppingcart.py
+013/class_menu.py
+
+# Контекстные менеджеры (with)
+016/with_basic_example.py
+016/with_class_changedir.py
+016/with_try_except.py
+
+# Генераторы
+018/generators_pancakes.py
+018/generators_chaining.py
+018/generators_multiple_yield.py
+
+
+# Включения (comprehensions)
+011/comprehensions.py
+011/number_squares.py
+011/names.py
+011/to_dicts.py
+011/invocation.py
+
+# Лямбда (lambda)
+012/lambda_demo.py
+
+# sorted
+012/sorted_demo.py
+
+# zip
+013/zip_demo.py
