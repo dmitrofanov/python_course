@@ -14,7 +14,20 @@
 """
 
 class Library:
-    pass # здесь твой код
+    def __init__(self):
+        self.books = {}
+    
+    def add_book(self,title, author):
+        self.books[title] = author
+        print(f"Добавили книгу: {title} , Автор: {author}")
+
+    def remove_book(self,title):
+        if title in self.books:
+            del self.books[title]
+            print(f'Удалена книга {title}')
+        else:
+            print(f'Книга {title} не найдена')
+
 
 ###### Код для тестирования:
 
@@ -27,10 +40,13 @@ library.add_book("Анна Каренина", "Толстой")
 library.add_book("Преступление и наказание", "Достоевский")
 library.add_book("Мастер и Маргарита", "Булгаков")
 
-library.show_all()
+library.remove_book("Мастер и Маргарита")
+library.remove_book("Унесенные ветром")
 
-# Ищем книги Толстого
-print("\nКниги Толстого:")
-tolstoy_books = library.find_by_author("Толстой")
-for book in tolstoy_books:
-    print(f"  {book}")
+# library.show_all()
+
+# # Ищем книги Толстого
+# print("\nКниги Толстого:")
+# tolstoy_books = library.find_by_author("Толстой")
+# for book in tolstoy_books:
+#     print(f"  {book}")
