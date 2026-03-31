@@ -27,6 +27,17 @@ class Library:
             print(f'Удалена книга {title}')
         else:
             print(f'Книга {title} не найдена')
+    
+    def find_by_author(self,author):
+        find_auth = []
+        for title, a in self.books.items():
+            if a == author:
+                find_auth.append(title)
+        return find_auth
+    
+    def show_all(self):
+        for title in self.books.items():
+            print(f"Все книги  {title}")
 
 
 ###### Код для тестирования:
@@ -43,10 +54,11 @@ library.add_book("Мастер и Маргарита", "Булгаков")
 library.remove_book("Мастер и Маргарита")
 library.remove_book("Унесенные ветром")
 
-# library.show_all()
+# Ищем книги Толстого
+print("\nКниги Толстого:")
+tolstoy_books = library.find_by_author("Толстой")
+for book in tolstoy_books:
+    print(f"  {book}")
 
-# # Ищем книги Толстого
-# print("\nКниги Толстого:")
-# tolstoy_books = library.find_by_author("Толстой")
-# for book in tolstoy_books:
-#     print(f"  {book}")
+library.show_all()
+
