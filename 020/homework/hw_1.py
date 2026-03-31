@@ -36,8 +36,8 @@ class Library:
         return find_auth
     
     def show_all(self):
-        for title in self.books.items():
-            print(f"Все книги  {title}")
+        for title, author in self.books.items():
+            print(f"Книга:  {title} , Автор: {author}")
 
 
 ###### Код для тестирования:
