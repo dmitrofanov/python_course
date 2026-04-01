@@ -20,4 +20,3 @@ print(repeat_numbers)
 
 duplicates ={num:quantity for num, quantity in repeat_numbers.items() if quantity > 1}
 print(f'Количество повторений {duplicates}')
-

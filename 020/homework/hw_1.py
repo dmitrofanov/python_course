@@ -58,7 +58,7 @@ library.remove_book("Унесенные ветром")
 print("\nКниги Толстого:")
 tolstoy_books = library.find_by_author("Толстой")
 for book in tolstoy_books:
-    print(f"  {book}")
+    print(f" {book}")
 
 library.show_all()
 
