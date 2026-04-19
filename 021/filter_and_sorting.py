@@ -19,4 +19,4 @@ employees = [
     {"name": "Сергей", "age": 45, "department": "HR", "salary": 95000},
     {"name": "Елена", "age": 31, "department": "Sales", "salary": 110000},
     {"name": "Дмитрий", "age": 33, "department": "IT", "salary": 125000},
-]
+] 
