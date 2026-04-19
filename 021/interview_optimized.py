@@ -7,7 +7,7 @@ students['students'] = [
     {'name': 'Пётр', 'age': 25, 'courses': [
         {'name': 'Math', 'grade': 3},
         {'name': 'English', 'grade': 5},
-        {'name': 'Literacture', 'grade': 5}
+        {'name': 'Literature', 'grade': 5}
     ]}
 ]
 from collections import defaultdict
