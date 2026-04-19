@@ -9,3 +9,19 @@
 
 Текст: "кот собака кот рыба кот птица собака рыба рыба рыба кот"
 """
+
+text = "кот собака кот рыба кот птица собака рыба рыба рыба кот лингтурон"
+words = text.split()
+from collections import Counter
+c = Counter(words)
+print(c)
+print(c.most_common(3))
+
+unique_words = set(words)
+longest_word = max(unique_words,key=len)
+print(longest_word)
+
+print(f"Количество слов в тексте: {len(words)}, Количество уникальных слов: {len(unique_words)}")
+
+
+
