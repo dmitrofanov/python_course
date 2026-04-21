@@ -21,3 +21,36 @@ products = [
     {"name": "Тетрадь", "category": "книги", "price": 80},
     {"name": "Наушники", "category": "электроника", "price": 3000},
 ]
+
+from collections import defaultdict
+
+categories = defaultdict(list)
+# categories["Отпуск"].append("веселый")
+
+#№1
+# for product in products:
+#     categories[product["category"]].append(product["name"])
+
+### или
+# categories = {}
+# for product in products:
+#     if product["category"] not in categories:
+#         categories[product["category"]] = []
+#     categories[product["category"]].append(product["name"])
+
+#№2
+for product in products:
+    categories[product["category"]].append(product)
+from pprint import pprint
+pprint(categories)
+
+
+
+# 2. Для каждой категории посчитать:
+#    - Количество товаров
+#    - Среднюю цену
+#    - Самый дорогой товар
+
+for category in categories:
+    print(f'В категории {category}: товаров {len(categories[category])} шт.')
+

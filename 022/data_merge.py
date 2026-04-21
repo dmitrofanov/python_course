@@ -34,3 +34,27 @@ grades = [
     {"student_id": 5, "grade": 5},
     {"student_id": 5, "grade": 4},
 ]
+
+student_data = {}
+for student in students:
+    student_data[student["id"]] = {"name":student["name"], "grades": []}
+
+for grade in grades:
+    student_grade = student_data[grade["student_id"]]
+    student_grade["grades"].append(grade["grade"])
+
+for id,data in student_data.items():
+    sum_grades = sum(data["grades"])
+    grades_count =len(data["grades"])
+    avg = sum_grades / grades_count
+    data["avg_grade"] = avg
+
+sorted_students = sorted(student_data.values(),key= lambda x: x["avg_grade"],reverse=True)
+print([f'Средняя оценка: {student["name"]} - {student["avg_grade"]}' for student in sorted_students])
+
+top_student = max(sorted_students,key = lambda x : x["avg_grade"])
+print(f'Max grade : {top_student["name"]}, {top_student["avg_grade"]}')
+
+
+print(student_data)
+
