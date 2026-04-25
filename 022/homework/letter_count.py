@@ -7,8 +7,8 @@ word = "программирование"
 
 
 from collections import Counter
-c = Counter(word)
-print(dict(c))
+letter_count = Counter(word)
+print(dict(letter_count))
 
 
 count_dict = {}
