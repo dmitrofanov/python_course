@@ -20,3 +20,23 @@ employees = [
     {"name": "Елена", "age": 31, "department": "Sales", "salary": 110000},
     {"name": "Дмитрий", "age": 33, "department": "IT", "salary": 125000},
 ] 
+
+print([f'{employee["name"]} - {employee["age"]}' for employee in employees if employee["age"] > 30])
+
+sorted_by_salary = sorted(employees,key=lambda x:x["salary"],reverse=True)
+print([f'{employee["name"]} - {employee["salary"]}' for employee in sorted_by_salary])
+
+from collections import defaultdict
+departments = defaultdict(list)
+for employee in employees:
+    departments[employee["department"]].append(employee["name"])
+print(departments)
+
+
+from collections import defaultdict
+departments = defaultdict(list)
+for employee in employees:
+    departments[employee["department"]].append(employee["salary"])
+for department,salaries in departments.items():
+    avg = sum(salaries) / len(salaries)
+    print(f'{department} - {avg}')

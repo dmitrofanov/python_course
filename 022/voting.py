@@ -12,5 +12,19 @@ votes = [
     "Иванов", "Петров", "Сидоров", "Иванов", "Петров",
     "Иванов", "Кузнецов", "Сидоров", "Иванов", "Петров",
     "Петров", "Иванов", "Сидоров", "Кузнецов", "Иванов",
-    "Петров", "Сидоров", "Иванов", "Петров", "Кузнецов"
+    "Петров", "Сидоров", "Иванов", "Петров", "Кузнецов", "Петров"
 ]
+
+results = {}
+for lastname in votes:
+    results[lastname]= results.get(lastname,0) + 1
+print(results)
+
+max_votes = max(results.values())
+for lastname,count in results.items():
+    if count == max_votes:
+        print(f'{lastname} - {max_votes}')
+
+for lastname,count in results.items():
+    s = count / len(votes) * 100
+    print(lastname,s)
