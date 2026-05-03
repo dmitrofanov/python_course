@@ -6,3 +6,6 @@
 """
 
 data = [10, None, 20, 30, None, 40, 50, None, 60]
+
+cleaned = [x for x in data if x is not None]
+print(cleaned)
