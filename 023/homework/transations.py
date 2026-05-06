@@ -16,3 +16,9 @@ transactions = [
     ("кафе", 500),
     ("развлечения", 800),
 ]
+
+total = {}
+for category, amount in transactions:
+    total[category] = total.get(category,0) + amount
+print(total)
+
