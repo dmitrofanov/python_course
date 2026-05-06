@@ -6,5 +6,5 @@
 items = [1, 2, 2, 3, 4, 4, 4, 5, 1, 6, 7, 7]
 
 u_items = len(set(items))
-
-print(u_items)
+min_items = len(items) - u_items
+print(min_items)
