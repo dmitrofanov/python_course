@@ -4,3 +4,10 @@
 """
 
 items = [10, 20, 30, 40, 50, 60, 70]
+
+N = int(input("Введите число N: "))
+
+if N > len(items):
+    print(f"Весь список: {items}")
+else:
+    print(items[:N])
