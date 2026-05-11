@@ -12,3 +12,16 @@ employees = [
     {"name": "Мария", "project": "Бета"},
     {"name": "Анна", "project": "Дельта"},
 ]
+
+project_dict = {}
+
+for employee in employees:
+    name = employee["name"]
+    project = employee["project"]
+    
+    if name not in project_dict:
+        project_dict[name] = []
+    
+    project_dict[name].append(project)
+
+print(project_dict)
