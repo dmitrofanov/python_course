@@ -22,3 +22,5 @@ for category, amount in transactions:
     total[category] = total.get(category,0) + amount
 print(total)
 
+print(min(total))
+
