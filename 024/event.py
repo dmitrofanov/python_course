@@ -9,4 +9,6 @@ def check_exit():
         if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
             pygame.quit()
             sys.exit()
+        else:
+            pygame.event.post(event)
 

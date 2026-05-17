@@ -22,5 +22,7 @@ for category, amount in transactions:
     total[category] = total.get(category,0) + amount
 print(total)
 
-print(min(total))
 
+print(total.items())
+print(min(total.items(), key=lambda x : x[1]))
+print(max(total.items(), key=lambda x : x[1]))
