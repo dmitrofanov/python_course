@@ -16,3 +16,7 @@ def draw_snake(snake):
     for x, y in snake:
         square(SNAKE_COLOR, x, y)
 
+def draw_food(food):
+    x, y = food
+    square(FOOD_COLOR, x, y)
+
