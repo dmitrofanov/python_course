@@ -5,3 +5,9 @@
 """
 adjectives = ["Хитрый", "Быстрый", "Тихий", "Смелый", "Весёлый"]
 nouns = ["Лис", "Волк", "Ёж", "Кот", "Пёс"]
+
+nick_names = []
+for x in adjectives:
+    for y in nouns:
+        nick_names.append(x+y)
+print(set(nick_names[:10]))

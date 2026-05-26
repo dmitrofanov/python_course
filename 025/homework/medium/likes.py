@@ -8,3 +8,12 @@ likes = {
     "post_3": {"Анна", "Мария", "Ольга", "Сергей"},
     "post_4": set(),
 }
+
+for post, users in likes.items():
+    likes_count = len(users)
+    if users:
+        names = ",".join(users)
+    else:
+        names = "лайков нет"
+
+    print(f"{post} :{likes_count} - {names}")
