@@ -11,3 +11,8 @@ games = [
     ("Мария", "Иван"),
 ]
 
+result = {}
+
+for winner, _ in games:
+    result[winner] = result.get(winner, 0) + 1
+print(result)
