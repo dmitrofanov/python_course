@@ -3,3 +3,5 @@
 """
 
 pair = {"first": "яблоко", "second": "банан"}
+pair["first"], pair["second"] = pair["second"],pair["first"]
+print(pair)

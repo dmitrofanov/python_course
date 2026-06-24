@@ -4,3 +4,6 @@
 """
 
 words = ["собака", "ёж", "бегемот", "кот", "носорог", "лис"]
+result = sorted(words, key = len)
+print(result)
+        
