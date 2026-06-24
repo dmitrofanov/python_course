@@ -5,3 +5,10 @@
 """
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 k = 3
+
+new_list = []
+for i in range(0, len(numbers), k):
+    chunk = numbers[i:i+k]
+    reversed_chunk = chunk[::-1]
+    new_list.extend(reversed_chunk)
+print(new_list)
