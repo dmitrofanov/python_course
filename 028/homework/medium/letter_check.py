@@ -5,3 +5,10 @@
 
 word = "программирование"
 letters = ["п", "р", "о", "г", "а", "м", "и", "с", "е", "н", "т"]
+
+rest = []
+for letter in letters:
+    if letter not in word:
+        rest.append(letter)
+
+print(f'букв {rest} нет в слове')
