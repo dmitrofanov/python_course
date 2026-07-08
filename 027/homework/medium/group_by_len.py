@@ -4,11 +4,15 @@
 """
 words = ["кот", "собака", "слон", "бегемот", "носорог", "лис", "волк", "ёж"]
 
-sorted_words = {}
+
+from collections import defaultdict
+
+sorted_words = defaultdict(list)
 
 for word in words:
     length_word= len(word)
-    if length_word not in sorted_words:
-        sorted_words[length_word] = []
     sorted_words[length_word].append(word)
+    # if length_word not in sorted_words:
+    #     sorted_words[length_word] = []
+    # sorted_words[length_word].append(word)
 print(sorted_words)
