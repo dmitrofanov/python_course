@@ -9,3 +9,7 @@ tests = [
     ['a', 'b', 'c', 'b', 'a'],
     ['a', 'b', 'c', 'd', 'e']
 ]
+
+for test in tests:
+    is_palindrom = test == test[::-1]
+    print(test, is_palindrom)
