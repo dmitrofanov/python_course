@@ -3,3 +3,7 @@
 """
 
 pairs = [("name", "Анна"), ("age", 25), ("city", "Москва"), ("job", "инженер")]
+
+result = dict(pairs)
+print(result)
+

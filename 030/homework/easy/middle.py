@@ -3,3 +3,6 @@
 """
 
 items = [10, 20, 30, 40, 50, 60, 70]
+
+for item in items[1:-1]:
+    print(item)
