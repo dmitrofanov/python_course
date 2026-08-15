@@ -7,3 +7,17 @@
 list_a = [1, 2, 3, 4, 5, 6, 7]
 list_b = [3, 5, 7]
 list_c = [3, 5, 8]
+
+print(f"list_b содержится в list_a: {set(list_b) <= set(list_a)}")
+print(f"list_c содержится в list_a: {set(list_c) <= set(list_a)}")
+
+#или
+
+lists = [list_b, list_c]
+
+for current_list in lists:
+    if set(current_list) <= set(list_a):
+        print(f'{current_list} содержится в {list_a}')
+    else:
+        print(f'{current_list} не содержится в {list_a}')
+    

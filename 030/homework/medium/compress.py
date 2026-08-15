@@ -4,3 +4,10 @@
 """
 
 data = [1, 1, 2, 2, 2, 3, 1, 1, 4, 4, 4, 4, 5]
+
+result = []
+for num in data:
+    if result == [] or num != result[-1]:
+        result.append(num)
+
+print(result)
