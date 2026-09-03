@@ -6,3 +6,12 @@
 text = "Анна и Иван гуляли в парке. Они увидели Ольгу и Артура."
 
 vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ"
+
+words = text.split()
+for word in words:
+    word = word.strip('.')
+    if word[0] in vowels:
+        print(word)
+
+
+

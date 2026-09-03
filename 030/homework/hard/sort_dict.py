@@ -10,3 +10,9 @@ data = {
     "группа_D": [1000],
     "группа_E": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
+
+result = {}
+print(dict(sorted(data.items(), key=lambda x:len(x[1]),reverse=True)))
+
+def something(x):
+    return len(x[1])
